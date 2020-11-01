@@ -1,0 +1,55 @@
+•	¿Qué es y para qué sirve el archivo web.xml?
+Es un archivo descriptor de implementación para determinar cómo se asignan las URL en los servlets, qué URL requiere autenticación y más información.
+
+•	¿Qué es un listener en java web development?
+Es el que se encarga de gestionar los eventos generales de la aplicación como son arranque y parada. 
+
+•	¿Qué es un servlet? 
+ Son módulos java que nos sirven para extender las capacidades de los servidores web o son programas para los servidores
+o	Qué especifican las etiquetas en web.xml?
+	servlet 
+Declara el servlet
+	servlet-name y servlet-class 
+Son parámetros de inicialización del servlet los cuales deben ser únicos.
+
+•	¿Para qué sirve el archivo root-context.xml?
+Es un archivo que contiene la declaración de los componentes que pueden ser utilizados en toda la aplicación:
+a.	Componentes de lógica de negocio
+b.	Componentes de acceso a datos
+
+•	¿Para qué sirve el archivo servlet-context.xml? 
+Es un archivo que permite acceder a la información asociada con la propia Aplicación y que es común a todos los Servlets que despleguemos dentro de esa aplicación.
+
+•	En servlet-context:
+o	Para qué sirve la etiqueta annotation-driven?
+Le dice a Spring que debe de poner un aviso sobre cualquier método o clase que tenga la anotación @Transactional. De esta manera se puede escribir lógica sobre los DAOs sin tener que considerar la semántica transactional.
+
+o	¿Para qué se configura el bean de la clase InternalResourceViewResolver? ¿Qué archivos están involucrados y por qué? 
+
+El InternalResourceViewResolver  es una implementación de ViewResolver en el marco Spring MVC que resuelve nombres de vista lógico como  "hola" a los recursos físicos internos como Servlet y JSP files. Se encarga de controlar y ubicar nombre de las vistas 
+ 
+
+o	Para qué sirve la etiqueta context:component-scan? Qué configura?
+	Escanea paquetes para encontrar y registrar beans dentro del contexto de la aplicación.
+
+•	g. En el archivo root-context.xml: 
+o	Qué relación tiene los xsi:schemaLocation con las etiquetas context:componentscan y mvc:annotation-driven ? 
+
+xsi:schemaLocation: se puede utilizar en un documento para proporcionar pistas sobre la ubicación física de los documentos del esquema que se pueden utilizar para la evaluación. Supongo que estos matienen control de las rutas para que así los beans puedan comunicarse entre archivos y cumplir su función
+
+o	Las características y atributos de cada etiqueta de las mencionadas 
+
+o	 Qué se define en bean? Y qué relación tiene con el archivo home.jsp?
+
+
+•	 h. En la clase HomeController.java, 
+o	 para qué sirve la anotación @Controller
+Permite que las clases de implementación se detecten automáticamente a través del escaneo de classpath
+
+o	Para qué sirve la anotación @Autowired
+Proporciona un control más detallado sobre dónde y cómo se debe realizar el cableado automático. La anotación @Autowired se puede usar para autowire bean en el método setter al igual que la anotación @Required, el constructor, una propiedad o métodos con nombres arbitrarios y / o múltiples argumentos
+ 
+o	Para qué sirve la anotación @RequestMapping y sus atributos? 
+Esta anotación asigna las solicitudes HTTP a los métodos de manejo de los controladores MVC y REST
+
+o	Qué es la clase Model referida y Locale?
